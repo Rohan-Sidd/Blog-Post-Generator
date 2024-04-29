@@ -21,9 +21,9 @@ from apikey import api_key
 
 #from apikey import google_gemini_api_key
 
-genai.configure(api_key="AIzaSyBmZSsqACVuHOOuJcUzkAjR5HAafEACJbc")
+genai.configure(api_key=api_key)
 
-
+# client=OpenAI(api_key=api_key)
 
 
 
@@ -128,6 +128,18 @@ with st.sidebar:
 #if submit button is pressed
 if submit_button:
         
+
+        # response = client.images.generate(
+        #       model="dall-e-3",
+        #       prompt="a white siamese cat",
+        #       size="1024x1024",
+        #       quality="standard",
+        #       n=1,
+        #     )
+        # image_url = response.data[0].url
+
+        # st.image(image_url,caption="real image, not AI generated!")
+        
         
 
 
@@ -142,14 +154,4 @@ if submit_button:
 
 
 
-# client=OpenAI(api_key=api_key)
-# response = client.images.generate(
-#               model="dall-e-3",
-#               prompt="a white siamese cat",
-#               size="1024x1024",
-#               quality="standard",
-#               n=1,
-#             )
-#         image_url = response.data[0].url
 
-#         st.image(image_url,caption="real image, not AI generated!")
